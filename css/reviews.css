@@ -1,0 +1,246 @@
+.container {
+    width: 100%;
+    max-width: 80%;
+    background: var(--background-color3);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/* Header styles */
+h1,
+h3 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--background-color5);
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: var(--background-color6);
+}
+
+#newReviewButton {
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--background-color6);
+}
+#newReviewButton:hover {
+    background-color: var(--background-color5);
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 22px); /* Adjust for padding and border */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form button {
+    width: 100%;
+}
+
+/* Review card styles */
+.review-card {
+    background: var(--background-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.review-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.review-card h3 {
+    margin: 0 0 10px;
+    color: #555;
+}
+
+.review-card div {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.review-card .details {
+    display: none;
+    margin-top: 10px;
+    border: solid 2px var(--background-color4);
+    padding: 15px;
+    border-radius: 20px;
+    color: #333;
+    font-size: 1em;
+}
+
+.review-card button.delete-button {
+    background-color: #dc3545;
+    margin-top: 10px;
+}
+
+.review-card button.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Filter and sort section */
+.filter-sort {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: var(--background-color2);
+}
+
+.filter-sort label,
+.filter-sort select,
+.filter-sort button {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.filter-sort label {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.filter-sort button {
+    padding: 10px;
+}
+
+/* Review summary section */
+.review-summary {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: var(--background-color2);
+}
+
+.review-summary .average-rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin-right: 20px;
+}
+
+.review-summary .average-rating {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-summary .average-rating-stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.review-summary .average-rating-stars .star {
+    color: gold;
+    font-size: 24px;
+}
+
+.review-summary .review-count {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.review-summary .summary-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.review-summary .rating-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-summary .rating-bar .rating-label {
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.review-summary .rating-bar .rating-bar-fill {
+    flex-grow: 1;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.review-summary .rating-bar .rating-bar-fill .fill {
+    height: 100%;
+    background-color: var(--background-color6);
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+}
+
+.review-summary .rating-bar .rating-count {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filterbuttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.basic_info {
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

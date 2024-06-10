@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link rel="stylesheet" href="css/mainpage.css" />
+        <script src="js/navbar.js" defer></script>
+        <script src="js/mainpage.js" defer></script>
+        <title>Main Page</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav_main">
+                <div class="nav_logo">
+                    <a href="mainpage.html">상 귤</a>
+                </div>
+                <ul class="nav_menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="notices.html">Notices</a></li>
+                    <li><a href="reviews.html">Review</a></li>
+                </ul>
+            </div>
+            <ul class="nav_icons">
+                <li><a id="cartLink" href="cart.html">Cart</a></li>
+                <li><a id="loginLink" href="login.html">Login</a></li>
+                <li>
+                    <a id="logoutLink" href="#" style="display: none">Logout</a>
+                </li>
+                <li class="sign-in">
+                    <a id="signInLink" href="sign-in.html">Sign In</a>
+                </li>
+                <li>
+                    <a id="myPageLink" href="my-page.html" style="display: none"
+                        >My Page</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="banner two image-container">
+                <img src="images/mainpage_background.jpg" alt="" />
+                <div class="centered on_image">
+                    <h1>상귤 농장</h1>
+                    <br />
+                    <h3>500만 고객님들의 선택! 최고만을 고집합니다!</h3>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="centered">
+                    <h1>
+                        전국 <b>무료</b> 배송! <br />
+                        전국 <b>당일</b> 배송!
+                    </h1>
+                    <br />
+                    <h2>
+                        상귤 농장은 <i>최고 신선도</i>와 <br />
+                        <i>최고 품질</i>의 상품을 보장합니다 <br />
+                    </h2>
+                </div>
+            </div>
+            <div class="banner three">
+                <div class="centered" id="reviews-section">
+                    <!-- Five-star reviews will be displayed here -->
+                </div>
+            </div>
+            <div class="banner grid">
+                <div class="grid_section">
+                    <img src="images/gamgyul1.jpg" alt="귤 사진" />
+                    <p>저농약 친환경</p>
+                </div>
+                <div class="grid_section">
+                    <img src="images/gamgyul2.jpg" alt="귤 사진" />
+                    <p>큼직한 크기</p>
+                </div>
+                <div class="grid_section">
+                    <img src="images/gamgyul3.jpg" alt="귤 사진" />
+                    <p>최고 당도 23 brix</p>
+                </div>
+            </div>
+            <div class="banner four">
+                <div class="centered">
+                    <h2 style="padding-bottom: 40px">지금 바로 주문하세요!</h2>
+                    <button class="button">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>
+            <span>상호명 : 상귤농장</span> | <span>대표자 : 김상협</span>|
+            <span>주소 : 제주도 서귀포시 동홍동 112-233</span> <br />
+            <span>이메일 : sanggyul@gmail.com</span>|
+            <span>전화번호 : 010-1234-5678</span> <br />
+            <span>© 2024 상귤농장. All rights reserved.</span>
+        </p>
+    </footer>
+</html>

@@ -1,0 +1,97 @@
+.container {
+    background-color: var(--background-color3);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cartItems {
+    margin-bottom: 20px;
+}
+
+.cart-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-card.selected {
+    background-color: orange;
+}
+
+.cart-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.cart-card input[type="number"] {
+    width: 50px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.cart-card button {
+    max-width: 30px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-card button:hover {
+    background: #c82333;
+}
+
+#cartSummary {
+    margin-top: 20px;
+}
+
+#cartSummary > div {
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(107deg, #ff5858 0%, #f09819 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buyNowButton:hover {
+    background: linear-gradient(
+        107deg,
+        rgb(255, 67, 5) 11.1%,
+        rgb(245, 135, 0) 95.3%
+    );
+    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px;
+    transition-duration: 0.1s;
+}
+
+#selectAllButton {
+    background: var(--background-color5);
+}
+
+#selectAllButton:hover {
+    background: var(--background-color6);
+}

@@ -1,0 +1,122 @@
+.banner {
+    height: 50vh;
+    position: relative;
+}
+.two {
+    background-color: var(--background-color2);
+}
+.three {
+    background-color: var(--background-color3);
+}
+.four {
+    background-color: var(--background-color4);
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container .on_image {
+    background-color: #ffb993da;
+    padding: 50px 50px;
+    border-radius: 50px;
+}
+
+.image-container .on_image h1 {
+    font-size: 4rem;
+}
+
+.image-container img {
+    opacity: 0.6;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .image-container img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grid_section {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.grid_section img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+}
+
+.grid_section p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: var(--background-color6);
+    font-weight: bold;
+}
+
+.button {
+    background: linear-gradient(107deg, #ff5858 0%, #f09819 100%);
+    border-radius: 8px;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 4rem;
+    padding: 0 1.6rem;
+    text-align: center;
+}
+
+.button:hover {
+    background: linear-gradient(
+        107deg,
+        rgb(255, 67, 5) 11.1%,
+        rgb(245, 135, 0) 95.3%
+    );
+    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px;
+    transition-duration: 0.1s;
+}
+
+/* Review section styles */
+#reviews-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#reviews-section h3 {
+    font-size: 4rem;
+    color: rgb(255, 67, 5);
+    margin-bottom: 10px;
+}
+
+#reviews-section p {
+    font-size: 1.7rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+#reviews-section p:first-of-type {
+    font-size: 1.5rem;
+    color: #ff5858; /* Color for stars */
+}
+
+b {
+    color: #ff5858;
+}
+
+i {
+    font-style: normal;
+    color: rgb(255, 67, 5);
+}

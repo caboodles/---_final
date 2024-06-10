@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link rel="stylesheet" href="css/notices.css" />
+        <script src="js/navbar.js" defer></script>
+        <script src="js/notices.js" defer></script>
+        <title>Notices</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav_main">
+                <div class="nav_logo">
+                    <a href="mainpage.html">상 귤</a>
+                </div>
+                <ul class="nav_menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="notices.html">Notices</a></li>
+                    <li><a href="reviews.html">Review</a></li>
+                </ul>
+            </div>
+            <ul class="nav_icons">
+                <li><a id="cartLink" href="cart.html">Cart</a></li>
+                <li><a id="loginLink" href="login.html">Login</a></li>
+                <li>
+                    <a id="logoutLink" href="#" style="display: none">Logout</a>
+                </li>
+                <li class="sign-in">
+                    <a id="signInLink" href="sign-in.html">Sign In</a>
+                </li>
+                <li>
+                    <a id="myPageLink" href="my-page.html" style="display: none"
+                        >My Page</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="title">
+                <div class="centered">
+                    <h1>공 지 사 항</h1>
+                    <h4>우리 농장의 소식을 전해드려요~!</h4>
+                </div>
+            </div>
+            <div><h4>&nbsp;</h4></div>
+            <div id="noticeBoard"></div>
+            <button id="addNoticeBtn" style="display: none; font-weight: bold">
+                공 지 추 가
+            </button>
+            <!-- Hide by default -->
+
+            <!-- Modal for adding a new notice -->
+            <div id="noticeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>새 공지 사항</h2>
+                    <form id="noticeForm">
+                        <label for="title">제목:</label>
+                        <input type="text" id="title" name="title" required />
+
+                        <label for="writer">글쓴이:</label>
+                        <input type="text" id="writer" name="writer" required />
+
+                        <label for="content">내용:</label>
+                        <textarea
+                            id="content"
+                            name="content"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                        <label for="important"
+                            >긴급 공지:
+                            <input
+                                type="checkbox"
+                                id="important"
+                                name="important"
+                        /></label>
+
+                        <button type="submit">공지 추가</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <p>
+            <span>상호명 : 상귤농장</span> | <span>대표자 : 김상협</span>|
+            <span>주소 : 제주도 서귀포시 동홍동 112-233</span> <br />
+            <span>이메일 : sanggyul@gmail.com</span>|
+            <span>전화번호 : 010-1234-5678</span> <br />
+            <span>© 2024 상귤농장. All rights reserved.</span>
+        </p>
+    </footer>
+</html>

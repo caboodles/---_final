@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/nav.css" />
+        <link rel="stylesheet" href="css/reviews.css" />
+        <script src="js/navbar.js" defer></script>
+        <script src="js/reviews.js" defer></script>
+        <title>Product Reviews</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav_main">
+                <div class="nav_logo">
+                    <a href="mainpage.html">상 귤</a>
+                </div>
+                <ul class="nav_menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="notices.html">Notices</a></li>
+                    <li><a href="reviews.html">Review</a></li>
+                </ul>
+            </div>
+            <ul class="nav_icons">
+                <li><a id="cartLink" href="cart.html">Cart</a></li>
+                <li><a id="loginLink" href="login.html">Login</a></li>
+                <li>
+                    <a id="logoutLink" href="#" style="display: none">Logout</a>
+                </li>
+                <li class="sign-in">
+                    <a id="signInLink" href="sign-in.html">Sign In</a>
+                </li>
+                <li>
+                    <a id="myPageLink" href="my-page.html" style="display: none"
+                        >My Page</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="title">
+                <div class="centered">
+                    <h1>상 품 리 뷰</h1>
+                    <h4>여러분의 소중한 리뷰 기다리고 있어요!</h4>
+                </div>
+            </div>
+            <div class="container">
+                <button id="newReviewButton">리뷰 쓰기</button>
+
+                <!-- Review Summary Section -->
+                <div id="starSummary"></div>
+
+                <div class="filter-sort">
+                    <label for="filterProduct">Filter</label>
+                    <select id="filterProduct">
+                        <option value="">All Products</option>
+                    </select>
+                    <div class="filterbuttons">
+                        <button id="filterButton">Filter</button>
+                        <button id="clearFilter">Clear Filter</button>
+                    </div>
+                    <label for="sortReviews">Sort</label>
+                    <select id="sortReviews">
+                        <option value="date">최근 작성</option>
+                        <option value="stars">별점</option>
+                        <option value="clicks">클릭 수</option>
+                    </select>
+                </div>
+
+                <!-- Review List Section -->
+                <div id="reviewList"></div>
+            </div>
+        </div>
+        <footer>
+            <p>
+                <span>상호명 : 상귤농장</span> | <span>대표자 : 김상협</span>|
+                <span>주소 : 제주도 서귀포시 동홍동 112-233</span> <br />
+                <span>이메일 : sanggyul@gmail.com</span>|
+                <span>전화번호 : 010-1234-5678</span> <br />
+                <span>© 2024 상귤농장. All rights reserved.</span>
+            </p>
+        </footer>
+    </body>
+</html>
