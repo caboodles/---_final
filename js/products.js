@@ -5,24 +5,21 @@ const preloadedProducts = [
         name: "천혜향",
         description: "향이 좋아요!",
         price: 13000,
-        imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkUIQuRjMX7g_V5wr9u4wyz9qqSAodYtxsFw&s",
+        imageUrl: "../images/gamgyul1.jpg",
     },
     {
         id: 2,
         name: "한라봉",
         description: "맛이 좋아요!",
         price: 15000,
-        imageUrl:
-            "https://images.chosun.com/resizer/aDaM-VD9l2RP6GJW96TQDXXdKiA=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/GSAI55AD5NBB5GPEWU7LKI4RG4.jpg",
+        imageUrl: "../images/gamgyul2.jpg",
     },
     {
         id: 3,
         name: "감귤",
         description: "신선하고 맛있어요!",
         price: 12000,
-        imageUrl:
-            "https://www.jejuilbo.net/news/photo/202203/179503_117832_4319.jpg",
+        imageUrl: "../images/gamgyul3.jpg",
     },
 ];
 
