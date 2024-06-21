@@ -1,33 +1,27 @@
-.image-container {
-    background-color: white;
-    position: relative;
-    width: 100%;
-    max-width: 70vw;
+.content .image-container {
+    width: 80vw;
     margin: auto;
+    background-image: url("../images/about_background.jpg");
+    background-repeat: repeat; /* Repeat the image */
+    background-size: contain; /* Adjust as needed: 'contain', 'cover', or specific dimensions */
+    background-position: center; /* Center the image */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    position: relative;
 }
 
-.image-container img {
-    opacity: 0.4;
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-container .image-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.content .image-container .image-overlay {
+    margin: 30px auto;
     background: white;
-    opacity: 0.85; /* Adjust opacity as needed */
+    opacity: 0.9; /* Adjust opacity as needed */
     z-index: 1;
     color: #333; /* Darker text color for better contrast */
     font-size: 1.2em; /* Larger font size */
     line-height: 1.5; /* More space between lines */
     width: 85%;
     padding: 20px;
-    box-sizing: border-box; /* Include padding in width calculation */
     overflow-wrap: break-word; /* Ensure text wraps within the container */
+    box-sizing: border-box;
 }
 
 .image-container .image-overlay h2,
@@ -48,23 +42,23 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .image-container .image-overlay {
+    .content .image-container .image-overlay {
         font-size: 1em; /* Reduce font size on smaller screens */
         padding: 10px;
     }
 
-    .image-container .image-overlay p {
+    .content .image-container .image-overlay p {
         font-size: 0.9em;
     }
 }
 
 @media (max-width: 480px) {
-    .image-container .image-overlay {
+    .content .image-container .image-overlay {
         font-size: 0.9em; /* Further reduce font size on very small screens */
         padding: 5px;
     }
 
-    .image-container .image-overlay p {
+    .content .image-container .image-overlay p {
         font-size: 0.8em;
     }
 }

@@ -17,6 +17,7 @@
 }
 
 .image-container .on_image {
+    min-width: 380px;
     background-color: #ffb993da;
     padding: 50px 50px;
     border-radius: 50px;

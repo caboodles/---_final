@@ -8,14 +8,6 @@
     margin: 20px auto;
 }
 
-/* Header styles */
-h1,
-h3 {
-    text-align: center;
-    color: #444;
-    margin-bottom: 20px;
-}
-
 /* Button styles */
 .content button {
     display: inline-block;
@@ -203,6 +195,7 @@ form button {
 
 .review-summary .rating-bar .rating-label {
     width: 20px;
+    font-weight: bold;
     text-align: right;
     margin-right: 10px;
     font-size: 16px;
@@ -243,4 +236,10 @@ form button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 800px) {
+    .basic_info {
+        flex-direction: column;
+    }
 }

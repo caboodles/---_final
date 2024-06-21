@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-.cart-card button {
+.content .cart-card button {
     max-width: 30px;
     background: #dc3545;
     color: white;

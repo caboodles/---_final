@@ -180,6 +180,10 @@
     .nav_icons {
         display: flex;
         margin-left: auto;
+        padding: 0;
+    }
+    .nav_icons li {
+        padding: 4px 2px;
     }
 
     .sidebar {
