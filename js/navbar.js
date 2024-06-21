@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburgerBtn = document.getElementById("hamburgerBtn");
     const sidebar = document.getElementById("sidebar");
     const navbar = document.querySelector(".navbar");
+    const navMenu = document.querySelector(".nav_menu");
 
     if (hamburgerBtn) {
         hamburgerBtn.addEventListener("click", function () {
@@ -58,8 +59,34 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.addEventListener("mouseleave", function () {
             navbar.classList.remove("orange");
         });
+
+        // Add click event listeners to <li> elements in the sidebar
+        const sidebarLinks = sidebar.querySelectorAll("li");
+        sidebarLinks.forEach(function (li) {
+            li.addEventListener("click", function () {
+                const anchor = li.querySelector("a");
+                if (anchor) {
+                    window.location.href = anchor.href;
+                }
+            });
+        });
     } else {
         console.error("Sidebar element not found");
+    }
+
+    if (navMenu) {
+        // Add click event listeners to <li> elements in the nav menu
+        const navMenuLinks = navMenu.querySelectorAll("li");
+        navMenuLinks.forEach(function (li) {
+            li.addEventListener("click", function () {
+                const anchor = li.querySelector("a");
+                if (anchor) {
+                    window.location.href = anchor.href;
+                }
+            });
+        });
+    } else {
+        console.error("Nav menu element not found");
     }
 
     updateNavbarLinks();

@@ -65,6 +65,7 @@
     margin-left: 10px;
     transition: background-color 0.3s, color 0.3s;
     border-radius: 7px;
+    cursor: pointer; /* Indicates clickable element */
 }
 
 .nav_menu li a {
@@ -132,6 +133,7 @@
     text-align: left;
     border-bottom: 1px solid var(--background-color3);
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer; /* Indicates clickable element */
 }
 
 .sidebar .sidebar_menu li a {
