@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderUserInfo() {
         userInfoDiv.innerHTML = `
-            <p><strong>User ID:</strong> ${user.userId}</p>
-            <p><strong>Name:</strong> ${user.name}</p>
-            <p><strong>Address:</strong> ${user.address}</p>
-            <p><strong>Phone:</strong> ${user.phone}</p>
-            <p><strong>Birthdate:</strong> ${user.birthdate}</p>
+            <p><strong>유저 ID : </strong> ${user.userId}</p>
+            <p><strong>이름 : </strong> ${user.name}</p>
+            <p><strong>주소 : </strong> ${user.address}</p>
+            <p><strong>전화번호 : </strong>:</strong> ${user.phone}</p>
+            <p><strong>생년월일 : </strong> ${user.birthdate}</p>
         `;
     }
 
