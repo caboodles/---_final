@@ -4,22 +4,28 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
+        <!-- 메인 CSS 파일 -->
         <link rel="stylesheet" href="css/nav.css" />
+        <!-- 네비게이션 CSS 파일 -->
         <link rel="stylesheet" href="css/cart.css" />
+        <!-- 장바구니 페이지 전용 CSS 파일 -->
         <script src="js/navbar.js" defer></script>
+        <!-- 네비게이션 바 스크립트 -->
         <script src="js/cart.js" defer></script>
+        <!-- 장바구니 페이지 스크립트 -->
         <title>Cart</title>
+        <!-- 페이지 제목 -->
     </head>
     <body>
         <nav class="navbar">
             <div class="nav_main">
-                <!-- Hamburger button -->
+                <!-- 햄버거 버튼 -->
                 <button class="hamburger" id="hamburgerBtn">&#9776;</button>
-                <!-- Nav logo -->
+                <!-- 네비게이션 로고 -->
                 <div class="nav_logo">
                     <a href="mainpage.html">상 귤</a>
                 </div>
-                <!-- Original nav menu -->
+                <!-- 기본 네비게이션 메뉴 -->
                 <ul class="nav_menu" id="navMenu">
                     <li><a href="about.html">About</a></li>
                     <li><a href="products.html">Products</a></li>
@@ -32,19 +38,22 @@
                 <li><a id="loginLink" href="login.html">Login</a></li>
                 <li>
                     <a id="logoutLink" href="#" style="display: none">Logout</a>
+                    <!-- 로그아웃 링크, 로그인 시 표시 -->
                 </li>
                 <li class="sign-in">
                     <a id="signInLink" href="sign-in.html">Sign In</a>
+                    <!-- 회원가입 링크 -->
                 </li>
                 <li class="my-page">
                     <a id="myPageLink" href="my-page.html" style="display: none"
                         >My Page</a
                     >
+                    <!-- 마이 페이지 링크, 로그인 시 표시 -->
                 </li>
             </ul>
         </nav>
 
-        <!-- Sidebar for small screens -->
+        <!-- 작은 화면용 사이드바 -->
         <div class="sidebar" id="sidebar">
             <ul class="sidebar_menu">
                 <li><a href="about.html">About</a></li>
@@ -63,12 +72,17 @@
 
             <div class="container">
                 <div id="cartItems"></div>
+                <!-- 장바구니 아이템 표시 영역 -->
                 <div id="cartSummary"></div>
+                <!-- 장바구니 요약 정보 표시 영역 -->
                 <button id="selectAllButton">모두 선택하기</button>
+                <!-- 모든 아이템 선택 버튼 -->
                 <button id="buyNowButton">구매하기</button>
+                <!-- 선택한 아이템 구매 버튼 -->
             </div>
         </div>
     </body>
+
     <footer>
         <p>
             <span>상호명 : 상귤농장</span> | <span>대표자 : 김상협</span>|
@@ -76,6 +90,7 @@
             <span>이메일 : sanggyul@gmail.com</span>|
             <span>전화번호 : 010-1234-5678</span> <br />
             <span>© 2024 상귤농장. All rights reserved.</span>
+            <!-- 저작권 정보 -->
         </p>
     </footer>
 </html>

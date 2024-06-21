@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/main.css" />
         <title>농장주</title>
     </head>
     <body>
@@ -13,83 +12,330 @@
         </div>
         <hr />
         <div>
-            <h2>관심 영역</h2>
-            <ul>
-                <li>여행</li>
-                <li>보드게임</li>
-                <li>노래방 가기</li>
-            </ul>
-            <h2>2024-1 학기 시간표</h2>
-            <table border="1">
-                <tr>
-                    <th>시간</th>
-                    <th>월</th>
-                    <th>화</th>
-                    <th>수</th>
-                    <th>목</th>
-                    <th>금</th>
-                </tr>
-                <tr>
-                    <td>12:00 ~ 13:15</td>
-                    <td></td>
-                    <td>네트워크 운영 관리</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>13:30 ~ 14:45</td>
-                    <td></td>
-                    <td></td>
-                    <td>프로그래밍 언어론</td>
-                    <td>네트워크 운영 관리</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>15:00 ~ 16:15</td>
-                    <td></td>
-                    <td>웹 프로그래밍</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>16:30 ~ 17:45</td>
-                    <td></td>
-                    <td></td>
-                    <td>인공지능</td>
-                    <td>웹 프로그래밍</td>
-                    <td></td>
-                </tr>
-            </table>
-
-            <h2>수강 과목</h2>
-            <p>
-                웹 프로그래밍, 네트워크 운영 관리, 프로그래밍 언어론, 인공지능,
-                교육실습, 교육봉사활동
-            </p>
+            <h1>귤 농장 사이트</h1>
+            <a
+                href="mainpage.html"
+                style="
+                    text-decoration: none;
+                    display: block;
+                    font-weight: bold;
+                    font-size: 3rem;
+                    color: blueviolet;
+                    text-align: center;
+                    border: 5px solid blueviolet;
+                    border-radius: 10px;
+                    background-color: linen;
+                "
+                >메인 페이지</a
+            >
+            <h2>
+                세션스토리지를 사용하여 정보를 저장합니다. 사이트 체험 전에
+                nav바의 모든 탭을 한번씩 들어가주신 후 체험 부탁드립니다!
+            </h2>
         </div>
         <hr />
-        <div>
-            <h1>귤 농장 사이트</h1>
-            <ul>
-                <li>
-                    <a
-                        href="mainpage.html"
-                        style="
-                            display: block;
-                            font-weight: bold;
-                            font-size: 3rem;
-                            color: blueviolet;
-                            text-align: center;
-                            border: 5px solid blueviolet;
-                            border-radius: 10px;
-                            background-color: linen;
-                        "
-                        >메인 페이지</a
-                    >
-                </li>
-            </ul>
-        </div>
+        <h1 id="-"><strong>프로젝트 개요</strong></h1>
+        <p>
+            이 프로젝트는 <strong>제주도 서귀포의 감귤 농장</strong>을 중심으로
+            한 웹 애플리케이션입니다. 사용자는 농장에 대한 정보, 제품 목록,
+            공지사항, 사용자 리뷰 등을 볼 수 있으며, 회원가입과 로그인을 통해
+            다양한 기능을 사용할 수 있습니다. 주요 기능으로는 제품 구매,
+            장바구니 관리, 사용자 리뷰 작성 등이 포함됩니다. <br />
+            <strong>반응형으로 모바일, PC 모든 환경에서 잘 동작합니다.</strong>
+        </p>
+        <h3 id="-"><strong>주요 기능 및 페이지 설명</strong></h3>
+        <h4 id="-1-mainpage-html-">
+            <strong>1. 메인 페이지 (mainpage.html)</strong>
+        </h4>
+        <ul>
+            <li><strong>기능</strong>: 농장과 제품에 대한 전반적인 소개.</li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>배너</strong>: 농장의 이미지와 광고 메시지를
+                        포함.
+                    </li>
+                    <li><strong>리뷰 섹션</strong>: 사용자 리뷰를 보여줌.</li>
+                    <li>
+                        <strong>상품 이미지</strong>: 농장의 주요 상품 이미지와
+                        특징을 보여줌.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-2-about-html-">
+            <strong>2. 설명 페이지 (about.html)</strong>
+        </h4>
+        <ul>
+            <li><strong>기능</strong>: 농장에 대한 이야기.</li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>농장 소개</strong>: 농장의 장점을 이야기로
+                        풀어서 설명함.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-3-products-html-">
+            <strong>3. 제품 페이지 (products.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 제품 목록을 보여주고, 사용자가 제품을
+                장바구니에 추가할 수 있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>제품 목록</strong>: 각 제품에 대한 정보와 가격을
+                        표시.
+                    </li>
+                    <li>
+                        <strong>장바구니 버튼</strong>: 사용자가 제품을
+                        장바구니에 추가할 수 있음.
+                    </li>
+                    <li>
+                        <strong>관리자 기능</strong>: 관리자는 제품을 추가하거나
+                        삭제할 수 있음.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-4-notices-html-">
+            <strong>4. 공지사항 페이지 (notices.html)</strong>
+        </h4>
+        <ul>
+            <li><strong>기능</strong>: 농장의 공지사항을 보여줌.</li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>공지 목록</strong>: 공지 제목, 작성자, 날짜,
+                        클릭 수 등을 표시.
+                    </li>
+                    <li>
+                        <strong>공지 내용</strong>: 클릭 시 공지의 자세한 내용을
+                        표시.
+                    </li>
+                    <li>
+                        <strong>관리자 기능</strong>: 관리자는 공지를 추가하거나
+                        삭제할 수 있음.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-5-reviews-html-">
+            <strong>5. 리뷰 페이지 (reviews.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자 리뷰를 보여주고, 필터 및 정렬
+                기능을 제공.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>리뷰 목록</strong>: 사용자 리뷰 제목, 작성자,
+                        제품명, 별점, 날짜 등을 표시.
+                    </li>
+                    <li>
+                        <strong>리뷰 필터</strong>: 제품명으로 리뷰를 필터링.
+                    </li>
+                    <li>
+                        <strong>리뷰 정렬</strong>: 날짜, 별점, 클릭 수로 리뷰를
+                        정렬.
+                    </li>
+                    <li>
+                        <strong>리뷰 요약</strong>: 평균 별점과 각 별점에
+                        해당하는 리뷰 수를 시각적으로 표시.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-6-new-review-html-">
+            <strong>6. 새 리뷰 작성 페이지 (new-review.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자가 새로운 리뷰를 작성하고 제출할 수
+                있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>리뷰 작성 폼</strong>: 제목, 작성자 이름, 제품
+                        선택, 별점, 리뷰 내용을 입력.
+                    </li>
+                    <li>
+                        <strong>리뷰 제출</strong>: 작성한 리뷰를 저장하고 리뷰
+                        페이지로 이동.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-7-sign-in-html-">
+            <strong>7. 회원가입 페이지 (sign-in.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자가 새로운 계정을 생성할 수 있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>회원가입 폼</strong>: 사용자 ID, 비밀번호, 이름,
+                        주소, 전화번호, 생년월일을 입력.
+                    </li>
+                    <li>
+                        <strong>회원가입 버튼</strong>: 입력한 정보를 기반으로
+                        계정을 생성하고 저장.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-8-login-html-">
+            <strong>8. 로그인 페이지 (login.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자가 로그인을 통해 개인화된 기능을
+                사용할 수 있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>로그인 폼</strong>: 사용자 ID와 비밀번호를 입력.
+                    </li>
+                    <li>
+                        <strong>로그인 버튼</strong>: 입력한 정보로 사용자
+                        인증을 수행.
+                    </li>
+                    <li>
+                        <strong>회원가입 버튼</strong>: 회원가입 페이지로 이동.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-9-cart-html-">
+            <strong>9. 장바구니 페이지 (cart.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자가 장바구니에 담은 제품을 관리하고
+                구매할 수 있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>장바구니 항목</strong>: 장바구니에 담긴 제품
+                        목록과 수량을 표시.
+                    </li>
+                    <li><strong>구매 버튼</strong>: 선택한 제품을 구매.</li>
+                    <li>
+                        <strong>전체 선택 버튼</strong>: 모든 제품을 선택하거나
+                        선택 해제.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-10-my-page-html-">
+            <strong>10. 마이 페이지 (my-page.html)</strong>
+        </h4>
+        <ul>
+            <li>
+                <strong>기능</strong>: 사용자 정보와 구매 내역을 관리할 수 있음.
+            </li>
+            <li>
+                <strong>구성 요소</strong>:
+                <ul>
+                    <li>
+                        <strong>회원 정보</strong>: 사용자의 개인 정보와
+                        연락처를 표시.
+                    </li>
+                    <li>
+                        <strong>구매 내역</strong>: 사용자가 구매한 제품 목록을
+                        표시.
+                    </li>
+                    <li>
+                        <strong>정보 수정</strong>: 사용자는 자신의 정보를
+                        수정할 수 있음.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h4 id="-11-"><strong>11. 공통 네비게이션 및 스타일</strong></h4>
+        <ul>
+            <li>
+                <p><strong>네비게이션 바 (navbar.js)</strong>:</p>
+                <ul>
+                    <li>
+                        로그인 여부에 따라 네비게이션 링크를 동적으로 업데이트.
+                    </li>
+                    <li>
+                        사이드바를 통해 모바일에서 네비게이션을 쉽게 접근할 수
+                        있음.
+                    </li>
+                    <li>
+                        네비게이션 바의 링크와 사이드바 항목을 클릭하면 해당
+                        페이지로 이동.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>CSS 파일들 (main.css, nav.css 등)</strong>:</p>
+                <ul>
+                    <li>
+                        각 페이지에 일관된 스타일을 적용하여 사용자 경험을 향상.
+                    </li>
+                    <li>
+                        네비게이션 바, 사이드바, 각 페이지의 주요 섹션을
+                        스타일링.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 id="-"><strong>기술 스택 및 데이터 관리</strong></h3>
+        <ul>
+            <li>
+                <strong>HTML &amp; CSS</strong>: 웹 페이지의 구조와 스타일을
+                정의.
+            </li>
+            <li>
+                <strong>JavaScript</strong>: 사용자 인터랙션과 데이터 관리를
+                담당.
+            </li>
+            <li>
+                <strong>Session Storage</strong>: 사용자 정보와 제품 데이터를
+                저장하고 관리.
+            </li>
+            <li>
+                <strong>DOM 조작</strong>: 페이지 로딩 시 DOM을 동적으로
+                업데이트하여 사용자 경험을 개선.
+            </li>
+        </ul>
+        <h3 id="-"><strong>데이터 흐름 및 관리</strong></h3>
+        <ul>
+            <li>
+                <strong>세션 스토리지</strong>: 사용자 로그인 정보, 제품 목록,
+                리뷰 등을 저장하고 필요한 페이지에서 가져와 사용.
+            </li>
+            <li>
+                <strong>DOM 이벤트 리스너</strong>: 폼 제출, 버튼 클릭 등의
+                이벤트를 감지하고 적절한 동작을 수행.
+            </li>
+            <li>
+                <strong>데이터 검증</strong>: 사용자 입력 데이터의 유효성을
+                검사하여 잘못된 입력을 방지.
+            </li>
+        </ul>
     </body>
 </html>

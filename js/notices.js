@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addNoticeBtn = document.getElementById("addNoticeBtn");
     const noticeForm = document.getElementById("noticeForm");
 
-    // Retrieve notices from sessionStorage
+    // 세션 스토리지에서 공지사항 로드
     let notices = JSON.parse(sessionStorage.getItem("notices")) || [
         {
             title: "농장 방문 시간 변경 안내",
@@ -24,17 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
             clicks: 0,
             important: false,
         },
-        // Add more initial notices if needed
     ];
 
+    // 공지사항 세션 스토리지에 저장
     function saveNotices() {
         sessionStorage.setItem("notices", JSON.stringify(notices));
     }
 
+    // 공지사항 렌더링
     function renderNotices() {
-        noticeBoard.innerHTML = "";
+        noticeBoard.innerHTML = ""; // 기존 공지사항 초기화
         notices
-            .sort((a, b) => b.important - a.important)
+            .sort((a, b) => b.important - a.important) // 긴급 공지를 상단에 정렬
             .forEach((notice, index) => {
                 const noticeCard = document.createElement("div");
                 noticeCard.className =
@@ -58,45 +59,50 @@ document.addEventListener("DOMContentLoaded", function () {
                         this.querySelector(
                             ".notice-clicks"
                         ).textContent = `Clicks: ${notice.clicks}`;
-                        saveNotices(); // Save updated clicks to sessionStorage
+                        saveNotices(); // 클릭 수 업데이트 후 세션 스토리지에 저장
                     }
                 });
-                noticeBoard.appendChild(noticeCard);
+                noticeBoard.appendChild(noticeCard); // 공지사항 카드 DOM에 추가
             });
     }
 
-    // Get logged-in user
+    // 로그인된 사용자 가져오기
     function getLoggedInUser() {
         const user = sessionStorage.getItem("loggedInUser");
         return user ? JSON.parse(user) : null;
     }
 
-    // Check if user is admin
+    // 사용자 관리자 여부 확인
     function isAdmin() {
         const user = getLoggedInUser();
         return user && user.isAdmin;
     }
 
+    // 관리자인 경우 공지 추가 버튼 표시
     if (isAdmin()) {
         addNoticeBtn.style.display = "block";
     } else {
         addNoticeBtn.style.display = "none";
     }
 
+    // 공지 추가 버튼 클릭 시 모달 표시
     addNoticeBtn.addEventListener("click", function () {
         noticeModal.style.display = "flex";
     });
 
+    // 모달 닫기 버튼 클릭 시 모달 숨김
     closeModal.addEventListener("click", function () {
         noticeModal.style.display = "none";
     });
 
+    // 모달 외부 클릭 시 모달 숨김
     window.addEventListener("click", function (event) {
         if (event.target == noticeModal) {
             noticeModal.style.display = "none";
         }
     });
 
+    // 공지사항 폼 제출 시 새 공지사항 추가
     noticeForm.addEventListener("submit", function (event) {
         event.preventDefault();
         const newNotice = {
@@ -108,13 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {
             important: document.getElementById("important").checked,
         };
         if (newNotice.title && newNotice.writer && newNotice.content) {
-            notices.push(newNotice);
-            renderNotices();
-            saveNotices(); // Save notices to sessionStorage
-            noticeModal.style.display = "none";
-            noticeForm.reset();
+            notices.push(newNotice); // 새 공지사항 배열에 추가
+            renderNotices(); // 공지사항 다시 렌더링
+            saveNotices(); // 세션 스토리지에 저장
+            noticeModal.style.display = "none"; // 모달 숨김
+            noticeForm.reset(); // 폼 초기화
         }
     });
 
-    renderNotices();
+    renderNotices(); // 페이지 로드 시 공지사항 렌더링
 });

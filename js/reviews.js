@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const starSummary = document.getElementById("starSummary");
     const newReviewButton = document.getElementById("newReviewButton");
 
+    // 리뷰 작성 페이지로 이동
     newReviewButton.addEventListener("click", () => {
         window.location.href = "new-review.html";
     });
 
+    // 미리 작성된 리뷰 데이터
     const prewrittenReviews = [
         {
             id: generateUniqueId(),
@@ -54,12 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     ];
 
+    // 세션 스토리지에서 리뷰 로드
     let reviews = loadReviewsFromSessionStorage();
 
+    // 고유 ID 생성 함수
     function generateUniqueId() {
         return "_" + Math.random().toString(36).substr(2, 9);
     }
 
+    // 세션 스토리지에서 리뷰 로드, 없으면 미리 작성된 리뷰 사용
     function loadReviewsFromSessionStorage() {
         const storedReviews = sessionStorage.getItem("reviews");
         if (!storedReviews) {
@@ -69,20 +74,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return JSON.parse(storedReviews);
     }
 
+    // 리뷰를 세션 스토리지에 저장
     function saveReviewsToSessionStorage(reviews) {
         sessionStorage.setItem("reviews", JSON.stringify(reviews));
     }
 
+    // 로그인된 사용자 정보 가져오기
     function getLoggedInUser() {
         const user = sessionStorage.getItem("loggedInUser");
         return user ? JSON.parse(user) : null;
     }
 
+    // 사용자 관리자 여부 확인
     function isAdmin() {
         const user = getLoggedInUser();
         return user && user.isAdmin;
     }
 
+    // 리뷰 필터 및 정렬 후 표시 함수
     const displayReviews = (filter = "", sortBy = "date") => {
         reviewList.innerHTML = "";
         let filteredReviews = reviews.filter((r) => r.product.includes(filter));
@@ -102,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div>By: ${review.name}</div>
                 <div>Product: ${review.product || "N/A"}</div>
                 <div>Date: ${review.date}</div>
-                <div class = "click-count">Clicks: ${review.clicks}</div>
+                <div class="click-count">Clicks: ${review.clicks}</div>
                 </div>
                 <div class="details" style="display: none;"><p>${
                     review.content
@@ -233,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     };
 
-    // Display reviews and update product dropdown on page load
+    // 페이지 로드 시 리뷰 표시 및 드롭다운 업데이트
     displayReviews();
     updateProductDropdown();
     updateStarSummary();

@@ -13,11 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    // 로그인된 사용자 정보 가져오기
     function getLoggedInUser() {
         const user = sessionStorage.getItem("loggedInUser");
         return user ? JSON.parse(user) : null;
     }
 
+    // 사용자 정보를 세션 스토리지에 저장
     function saveUserToSessionStorage(user) {
         const users = JSON.parse(sessionStorage.getItem("users"));
         const userIndex = users.findIndex((u) => u.userId === user.userId);
@@ -28,16 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // 사용자 정보 렌더링
     function renderUserInfo() {
         userInfoDiv.innerHTML = `
             <p><strong>유저 ID : </strong> ${user.userId}</p>
             <p><strong>이름 : </strong> ${user.name}</p>
             <p><strong>주소 : </strong> ${user.address}</p>
-            <p><strong>전화번호 : </strong>:</strong> ${user.phone}</p>
+            <p><strong>전화번호 : </strong>${user.phone}</p>
             <p><strong>생년월일 : </strong> ${user.birthdate}</p>
         `;
     }
 
+    // 구매 내역 렌더링
     function renderPurchaseHistory() {
         purchaseHistoryDiv.innerHTML = "";
         const products = JSON.parse(sessionStorage.getItem("products")) || [];
@@ -66,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 회원정보 수정 버튼 클릭 이벤트
     editUserInfoButton.addEventListener("click", () => {
         document.getElementById("userName").value = user.name;
         document.getElementById("userAddress").value = user.address;
@@ -74,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         userInfoModal.style.display = "flex";
     });
 
+    // 회원 정보 수정 폼 제출 이벤트
     userInfoForm.addEventListener("submit", (event) => {
         event.preventDefault();
         user.name = document.getElementById("userName").value;
@@ -85,16 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
         renderUserInfo();
     });
 
+    // 모달 닫기 버튼 클릭 이벤트
     closeModal.addEventListener("click", () => {
         userInfoModal.style.display = "none";
     });
 
+    // 모달 외부 클릭 시 모달 닫기
     window.addEventListener("click", (event) => {
         if (event.target == userInfoModal) {
             userInfoModal.style.display = "none";
         }
     });
 
-    renderUserInfo();
-    renderPurchaseHistory();
+    renderUserInfo(); // 회원 정보 초기 렌더링
+    renderPurchaseHistory(); // 구매 내역 초기 렌더링
 });

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const products = JSON.parse(sessionStorage.getItem("products")) || [];
     let selectedItems = new Set();
 
+    // 장바구니에 담긴 상품 정보 가져오기
     function getCartProducts() {
         return Object.keys(user.cart).map((productId) => {
             const product = products.find(
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 장바구니 UI 렌더링
     function renderCart() {
         cartItemsContainer.innerHTML = "";
         const cartProducts = getCartProducts();
@@ -43,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="delete-button" data-id="${product.id}">X</button>
             `;
 
+            // 수량 변경 이벤트 처리
             cartCard
                 .querySelector("input")
                 .addEventListener("input", (event) => {
@@ -54,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 });
 
+            // 삭제 버튼 클릭 이벤트 처리
             cartCard.querySelector("button").addEventListener("click", () => {
                 delete user.cart[product.id];
                 saveUserToSessionStorage(user);
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateCartSummary();
             });
 
+            // 아이템 선택/해제 이벤트 처리
             cartCard.addEventListener("click", (event) => {
                 if (event.target.tagName !== "BUTTON") {
                     if (selectedItems.has(product.id)) {
@@ -81,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSelectedSummary();
     }
 
+    // 장바구니 요약 정보 업데이트
     function updateCartSummary() {
         const totalItems = Object.keys(user.cart).length;
         const totalPrice = Object.keys(user.cart).reduce((total, productId) => {
@@ -93,11 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
         cartSummary.innerHTML = `
             <div id="totalSummary">
                 <span>전체 상품 : ${totalItems}</span>
-                <span style= "padding-left:10px">전체 가격 : ₩${totalPrice.toLocaleString()}</span>
+                <span style="padding-left:10px">전체 가격 : ₩${totalPrice.toLocaleString()}</span>
             </div>
         `;
     }
 
+    // 선택된 상품 요약 정보 업데이트
     function updateSelectedSummary() {
         const selectedSummaryDiv = document.getElementById("selectedSummary");
         if (selectedSummaryDiv) {
@@ -118,17 +125,18 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedSummary.innerHTML = `
             <div id="selectedSummary">
                 <span>선택한 상품 : ${selectedCount}</span>
-                <span style= "padding-left:10px">선택한 상품 가격 : ₩${selectedPrice.toLocaleString()}</span>
+                <span style="padding-left:10px">선택한 상품 가격 : ₩${selectedPrice.toLocaleString()}</span>
             </div>
         `;
 
         cartSummary.appendChild(selectedSummary);
     }
 
+    // 모두 선택/해제 버튼 이벤트 처리
     selectAllButton.addEventListener("click", () => {
         const cartProducts = getCartProducts();
         if (selectedItems.size === cartProducts.length) {
-            // Unselect all items
+            // 모든 아이템 선택 해제
             selectedItems.clear();
             cartProducts.forEach((product) => {
                 const cartCard = document.querySelector(
@@ -137,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cartCard.classList.remove("selected");
             });
         } else {
-            // Select all items
+            // 모든 아이템 선택
             selectedItems.clear();
             cartProducts.forEach((product) => {
                 selectedItems.add(product.id);
@@ -150,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSelectedSummary();
     });
 
+    // 구매 버튼 이벤트 처리
     buyNowButton.addEventListener("click", () => {
         if (selectedItems.size === 0) {
             alert("구매할 상품을 선택해주세요.");
@@ -171,6 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("선택한 상품이 구매되었습니다.");
     });
 
+    // 사용자 정보 세션 스토리지에 저장
     function saveUserToSessionStorage(user) {
         const users = JSON.parse(sessionStorage.getItem("users"));
         const userIndex = users.findIndex((u) => u.userId === user.userId);
@@ -181,10 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // 로그인된 사용자 정보 로드
     function getLoggedInUser() {
         const user = sessionStorage.getItem("loggedInUser");
         return user ? JSON.parse(user) : null;
     }
 
-    renderCart();
+    renderCart(); // 장바구니 초기 렌더링
 });

@@ -1,238 +1,250 @@
-/* General styles */
+/* 네비게이션 바 스타일 */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background-color);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    transition: background-color 0.15s;
-    padding: 16px;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 요소들 사이에 공간 균등 분배 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: var(--background-color); /* 배경 색상 설정 */
+    position: fixed; /* 화면에 고정 */
+    width: 100%; /* 전체 너비 사용 */
+    top: 0; /* 상단에 고정 */
+    z-index: 100; /* 쌓임 순서 지정 */
+    transition: background-color 0.15s; /* 배경색 전환 효과 */
+    padding: 16px; /* 내부 여백 설정 */
 }
 
 .navbar.orange {
-    background-color: orange;
-    border-bottom: solid 1px var(--background-color6);
+    background-color: orange; /* 주황색 배경 */
+    border-bottom: solid 1px var(--background-color6); /* 하단 테두리 */
 }
 
 .navbar:hover {
-    background-color: orange;
+    background-color: orange; /* 호버 시 배경색 변경 */
 }
 
 .navbar:hover .nav_logo a,
 .navbar:hover .nav_menu li a,
 .navbar:hover .nav_icons li a {
-    color: var(--hover-text-color);
+    color: var(--hover-text-color); /* 호버 시 텍스트 색상 변경 */
 }
+
 .navbar:hover .nav_logo:hover a {
-    color: var(--background-color6);
+    color: var(
+        --background-color6
+    ); /* 로고에 마우스를 올렸을 때 텍스트 색상 변경 */
 }
 
+/* 네비게이션 메인 컨테이너 */
 .nav_main {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    display: flex; /* 플렉스 박스 사용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 전체 너비 사용 */
 }
 
+/* 네비게이션 로고 스타일 */
 .nav_logo {
-    font-size: 24px;
-    margin: 0 40px;
-    text-align: left;
-    flex: 1;
+    font-size: 24px; /* 폰트 크기 설정 */
+    margin: 0 40px; /* 좌우 마진 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    flex: 1; /* 플렉스 요소 크기 조정 */
 }
 
 .nav_logo a {
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s;
+    color: var(--text-color); /* 텍스트 색상 설정 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    transition: color 0.3s; /* 색상 전환 효과 */
 }
 
 .nav_logo a:hover {
-    color: var(--hover-text-color);
+    color: var(--hover-text-color); /* 호버 시 텍스트 색상 변경 */
 }
 
+/* 네비게이션 메뉴 스타일 */
 .nav_menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-left: auto;
+    display: flex; /* 플렉스 박스 사용 */
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin-left: auto; /* 좌측 자동 마진 */
 }
 
 .nav_menu li {
-    padding: 8px 16px;
-    margin-left: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 7px;
-    cursor: pointer; /* Indicates clickable element */
+    padding: 8px 16px; /* 내부 여백 설정 */
+    margin-left: 10px; /* 좌측 마진 설정 */
+    transition: background-color 0.3s, color 0.3s; /* 배경색과 텍스트 색상 전환 효과 */
+    border-radius: 7px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 .nav_menu li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--text-color); /* 텍스트 색상 설정 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    transition: color 0.3s; /* 텍스트 색상 전환 효과 */
 }
 
 .navbar:hover .nav_menu li:hover a {
-    color: var(--background-color6);
+    color: var(--background-color6); /* 호버 시 텍스트 색상 변경 */
 }
+
 .nav_menu li:hover {
-    background-color: var(--accent-color);
-    border-radius: 7px;
+    background-color: var(--accent-color); /* 호버 시 배경색 변경 */
+    border-radius: 7px; /* 둥근 모서리 설정 */
 }
+
+/* 네비게이션 아이콘 스타일 */
 .nav_icons {
-    display: flex;
-    list-style: none;
-    padding: 0 20px 0 0;
+    display: flex; /* 플렉스 박스 사용 */
+    list-style: none; /* 리스트 스타일 제거 */
+    padding: 0 20px 0 0; /* 패딩 설정 */
 }
 
 .nav_icons li {
-    padding: 4px 8px;
-    border: 3px solid transparent;
-
-    transition: border-color 0.3s, color 0.3s;
+    padding: 4px 8px; /* 내부 여백 설정 */
+    border: 3px solid transparent; /* 투명 테두리 */
+    transition: border-color 0.3s, color 0.3s; /* 테두리 색상과 텍스트 색상 전환 효과 */
 }
 
 .nav_icons li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--text-color); /* 텍스트 색상 설정 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    transition: color 0.3s; /* 텍스트 색상 전환 효과 */
 }
 
 .navbar:hover .nav_icons li:hover a {
-    color: rgb(78, 78, 240);
+    color: rgb(78, 78, 240); /* 호버 시 텍스트 색상 변경 */
 }
 
+/* 사이드바 스타일 */
 .sidebar {
-    display: none;
-    position: fixed;
-    top: 71px;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-    max-height: 0;
-    z-index: 99;
+    display: none; /* 기본적으로 보이지 않음 */
+    position: fixed; /* 화면에 고정 */
+    top: 71px; /* 상단에서 71px 아래 */
+    left: 0; /* 좌측 정렬 */
+    width: 100%; /* 전체 너비 사용 */
+    background-color: var(--background-color); /* 배경 색상 설정 */
+    transition: max-height 0.3s ease; /* 최대 높이 전환 효과 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    max-height: 0; /* 기본적으로 높이 0 */
+    z-index: 99; /* 쌓임 순서 지정 */
 }
 
 .sidebar:hover {
-    background-color: rgb(255, 197, 91);
+    background-color: rgb(255, 197, 91); /* 호버 시 배경색 변경 */
 }
 
 .sidebar .sidebar_menu {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    flex-direction: column; /* 세로 방향 정렬 */
+    margin: 0; /* 마진 제거 */
+    padding: 0; /* 패딩 제거 */
+    list-style: none; /* 리스트 스타일 제거 */
 }
 
 .sidebar .sidebar_menu li {
-    padding: 10px 20px;
-    text-align: left;
-    border-bottom: 1px solid var(--background-color3);
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer; /* Indicates clickable element */
+    padding: 10px 20px; /* 내부 여백 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    border-bottom: 1px solid var(--background-color3); /* 하단 테두리 설정 */
+    transition: background-color 0.3s, color 0.3s; /* 배경색과 텍스트 색상 전환 효과 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 .sidebar .sidebar_menu li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
+    color: var(--text-color); /* 텍스트 색상 설정 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    transition: color 0.3s; /* 텍스트 색상 전환 효과 */
 }
 
 .sidebar .sidebar_menu li:hover {
-    background-color: var(--background-color5);
+    background-color: var(--background-color5); /* 호버 시 배경색 변경 */
 }
+
 .sidebar .sidebar_menu li:hover a {
-    color: var(--hover-text-color);
+    color: var(--hover-text-color); /* 호버 시 텍스트 색상 변경 */
 }
 
-/* Hamburger menu button */
+/* 햄버거 메뉴 버튼 스타일 */
 .hamburger {
-    font-size: 30px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    display: none;
+    font-size: 30px; /* 폰트 크기 설정 */
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    cursor: pointer; /* 커서 모양 변경 */
+    display: none; /* 기본적으로 보이지 않음 */
 }
 
-/* Responsive styles */
+/* 반응형 스타일 */
 @media screen and (max-width: 800px) {
     .nav_main {
-        justify-content: center;
+        justify-content: center; /* 수평 중앙 정렬 */
     }
 
     .nav_logo {
-        margin: 0 auto;
-        text-align: center;
-        flex: none;
+        margin: 0 auto; /* 중앙 정렬 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+        flex: none; /* 플렉스 효과 제거 */
     }
 
     .nav_menu {
-        display: none;
+        display: none; /* 메뉴 보이지 않음 */
     }
 
     .hamburger {
-        display: block;
-        margin-left: 20px;
+        display: block; /* 햄버거 버튼 보이기 */
+        margin-left: 20px; /* 좌측 마진 설정 */
     }
 
     .nav_icons {
-        display: flex;
-        margin-left: auto;
-        padding: 0;
+        display: flex; /* 플렉스 박스 사용 */
+        margin-left: auto; /* 좌측 자동 마진 */
+        padding: 0; /* 패딩 제거 */
     }
+
     .nav_icons li {
-        padding: 4px 2px;
+        padding: 4px 2px; /* 내부 여백 설정 */
     }
 
     .sidebar {
-        display: flex;
-        flex-direction: column;
-        max-height: 0;
+        display: flex; /* 플렉스 박스 사용 */
+        flex-direction: column; /* 세로 방향 정렬 */
+        max-height: 0; /* 기본적으로 높이 0 */
     }
 
     .sidebar.show {
-        max-height: 300px;
+        max-height: 300px; /* 사이드바 보이기 */
     }
+
     .sign-in,
     .my-page {
-        white-space: nowrap; /* Ensure "Sign In" stays in one line */
+        white-space: nowrap; /* 한 줄로 표시 */
     }
 }
 
 @media screen and (min-width: 801px) {
     .nav_main {
-        justify-content: flex-start;
+        justify-content: flex-start; /* 왼쪽 정렬 */
     }
 
     .nav_logo {
-        margin: 0 20px;
-        text-align: left;
-        flex: none;
+        margin: 0 20px; /* 좌우 마진 설정 */
+        text-align: left; /* 텍스트 왼쪽 정렬 */
+        flex: none; /* 플렉스 효과 제거 */
     }
 
     .nav_menu {
-        display: flex;
-        margin-left: 20px;
+        display: flex; /* 메뉴 보이기 */
+        margin-left: 20px; /* 좌측 마진 설정 */
     }
 
     .nav_icons {
-        display: flex;
+        display: flex; /* 플렉스 박스 사용 */
     }
 
     .sidebar {
-        display: none;
+        display: none; /* 사이드바 보이지 않음 */
     }
 
     .hamburger {
-        display: none;
+        display: none; /* 햄버거 버튼 보이지 않음 */
     }
 
     .sign-in,
     .my-page {
-        white-space: nowrap; /* Ensure "Sign In" stays in one line */
+        white-space: nowrap; /* 한 줄로 표시 */
     }
 }

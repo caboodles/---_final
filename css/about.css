@@ -1,64 +1,64 @@
 .content .image-container {
     width: 80vw;
-    margin: auto;
+    margin: auto; /* 중앙 정렬 */
     background-image: url("../images/about_background.jpg");
-    background-repeat: repeat; /* Repeat the image */
-    background-size: contain; /* Adjust as needed: 'contain', 'cover', or specific dimensions */
-    background-position: center; /* Center the image */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    position: relative;
+    background-repeat: repeat; /* 이미지 반복 */
+    background-size: contain; /* 배경 이미지 크기를 'contain'으로 설정 */
+    background-position: center; /* 이미지 중앙 정렬 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    position: relative; /* 상대 위치 지정 */
 }
 
 .content .image-container .image-overlay {
-    margin: 30px auto;
-    background: white;
-    opacity: 0.9; /* Adjust opacity as needed */
-    z-index: 1;
-    color: #333; /* Darker text color for better contrast */
-    font-size: 1.2em; /* Larger font size */
-    line-height: 1.5; /* More space between lines */
-    width: 85%;
-    padding: 20px;
-    overflow-wrap: break-word; /* Ensure text wraps within the container */
-    box-sizing: border-box;
+    margin: 30px auto; /* 중앙 정렬 및 상하 마진 설정 */
+    background: white; /* 흰색 배경 */
+    opacity: 0.9; /* 불투명도 설정 */
+    z-index: 1; /* 요소 우선순위 설정 */
+    color: #333; /* 어두운 텍스트 색상 */
+    font-size: 1.2em; /* 폰트 크기 설정 */
+    line-height: 1.5; /* 줄 간격 설정 */
+    width: 85%; /* 너비 설정 */
+    padding: 20px; /* 내부 여백 설정 */
+    overflow-wrap: break-word; /* 텍스트 줄바꿈 설정 */
+    box-sizing: border-box; /* 박스 크기 계산 방식 설정 */
 }
 
 .image-container .image-overlay h2,
 .image-container .image-overlay p {
-    position: relative;
-    z-index: 2;
-    margin: 0;
-    padding: 10px;
+    position: relative; /* 상대 위치 지정 */
+    z-index: 2; /* 텍스트 요소 우선순위 설정 */
+    margin: 0; /* 외부 여백 제거 */
+    padding: 10px; /* 내부 여백 설정 */
 }
 
 .image-container .image-overlay p {
-    text-align: left;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
 .image-container .image-overlay p b {
-    color: orange;
+    color: orange; /* 강조 텍스트 색상 설정 */
 }
 
-/* Responsive adjustments */
+/* 반응형 조정 */
 @media (max-width: 768px) {
     .content .image-container .image-overlay {
-        font-size: 1em; /* Reduce font size on smaller screens */
-        padding: 10px;
+        font-size: 1em; /* 작은 화면에서 폰트 크기 조정 */
+        padding: 10px; /* 내부 여백 축소 */
     }
 
     .content .image-container .image-overlay p {
-        font-size: 0.9em;
+        font-size: 0.9em; /* 작은 화면에서 단락 폰트 크기 조정 */
     }
 }
 
 @media (max-width: 480px) {
     .content .image-container .image-overlay {
-        font-size: 0.9em; /* Further reduce font size on very small screens */
-        padding: 5px;
+        font-size: 0.9em; /* 매우 작은 화면에서 폰트 크기 추가 조정 */
+        padding: 5px; /* 내부 여백 추가 축소 */
     }
 
     .content .image-container .image-overlay p {
-        font-size: 0.8em;
+        font-size: 0.8em; /* 매우 작은 화면에서 단락 폰트 크기 추가 조정 */
     }
 }

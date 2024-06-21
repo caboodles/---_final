@@ -1,167 +1,168 @@
 #noticeBoard {
-    background-color: var(--background-color3);
-    border-radius: 25px;
-    padding: 20px;
-    width: 80vw;
-    margin: 0 auto;
+    background-color: var(--background-color3); /* 배경 색상 설정 */
+    border-radius: 25px; /* 둥근 모서리 설정 */
+    padding: 20px; /* 내부 여백 20px */
+    width: 80vw; /* 너비를 뷰포트 너비의 80%로 설정 */
+    margin: 0 auto; /* 좌우 중앙 정렬 */
 }
 
 .notice-card {
-    background: var(--background-color);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background: var(--background-color); /* 배경 색상 설정 */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 10px; /* 둥근 모서리 설정 */
+    padding: 20px; /* 내부 여백 20px */
+    margin: 10px 0; /* 상하 마진 10px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: all 0.3s ease; /* 전환 효과 */
 }
 
 .notice-card.important {
-    border-left: 5px solid red;
+    border-left: 5px solid red; /* 중요 알림에 빨간색 왼쪽 테두리 */
 }
 
 .notice-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 강화 */
 }
 
 .notice-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 요소 간의 공간 균등 분배 */
+    align-items: center; /* 수직 중앙 정렬 */
 }
 
 .notice-number {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-right: 10px;
+    font-size: 1.2em; /* 폰트 크기 설정 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    margin-right: 10px; /* 오른쪽 마진 10px */
 }
 
 .notice-title {
-    flex-grow: 1;
-    font-size: 1.2em;
-    font-weight: bold;
+    flex-grow: 1; /* 가로로 공간을 차지하도록 설정 */
+    font-size: 1.2em; /* 폰트 크기 설정 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
 }
 
 .notice-writer,
 .notice-date,
 .notice-clicks {
-    font-size: 0.9em;
-    margin-right: 5px;
-    margin-left: 7px;
-    color: #666;
+    font-size: 0.9em; /* 폰트 크기 설정 */
+    margin-right: 5px; /* 오른쪽 마진 5px */
+    margin-left: 7px; /* 왼쪽 마진 7px */
+    color: #666; /* 텍스트 색상 설정 */
 }
 
 .notice-content {
-    display: none;
-    border: solid 2px var(--background-color4);
-    padding: 15px;
-    border-radius: 20px;
-    margin-top: 25px;
-    color: #333;
+    display: none; /* 기본적으로 보이지 않음 */
+    border: solid 2px var(--background-color4); /* 테두리 설정 */
+    padding: 15px; /* 내부 여백 15px */
+    border-radius: 20px; /* 둥근 모서리 설정 */
+    margin-top: 25px; /* 상단 마진 25px */
+    color: #333; /* 텍스트 색상 설정 */
 }
 
 .content button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: var(--background-color5);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: block; /* 블록 요소로 설정 */
+    margin: 20px auto; /* 상하 마진 20px, 좌우 중앙 정렬 */
+    padding: 10px 20px; /* 내부 여백 설정 */
+    font-size: 1em; /* 폰트 크기 설정 */
+    background-color: var(--background-color5); /* 배경 색상 설정 */
+    color: #fff; /* 텍스트 색상 흰색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
 }
 
 .content button:hover {
-    background-color: var(--background-color6);
+    background-color: var(--background-color6); /* 호버 시 배경색 변경 */
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    display: none; /* 기본적으로 보이지 않음 */
+    position: fixed; /* 화면에 고정 */
+    z-index: 1; /* 쌓임 순서 지정 */
+    left: 0; /* 좌측 0 위치 */
+    top: 0; /* 상단 0 위치 */
+    width: 100%; /* 전체 너비 사용 */
+    height: 100%; /* 전체 높이 사용 */
+    overflow: auto; /* 넘치는 내용 스크롤 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
 }
 
 .modal-content {
-    background-color: var(--background-color);
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 15px;
+    background-color: var(--background-color); /* 배경 색상 설정 */
+    margin: auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 20px */
+    border: 1px solid #888; /* 테두리 설정 */
+    width: 80%; /* 너비를 부모 요소의 80%로 설정 */
+    max-width: 500px; /* 최대 너비를 500px로 제한 */
+    border-radius: 15px; /* 둥근 모서리 설정 */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #aaa; /* 텍스트 색상 설정 */
+    float: right; /* 우측 정렬 */
+    font-size: 28px; /* 폰트 크기 설정 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black; /* 호버 및 포커스 시 텍스트 색상 변경 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
+    display: block; /* 블록 요소로 설정 */
+    margin: 10px 0 5px; /* 상하 마진 10px, 하단 마진 5px */
 }
 
 input[type="text"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: 100%; /* 너비를 100%로 설정 */
+    padding: 10px; /* 내부 여백 10px */
+    margin: 5px 0 10px; /* 상하 마진 5px, 하단 마진 10px */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 4px; /* 둥근 모서리 설정 */
+    box-sizing: border-box; /* 박스 크기 계산 방식을 border-box로 설정 */
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 10px; /* 오른쪽 마진 10px */
 }
 
 form button {
-    background-color: var(--background-color5);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 4px;
+    background-color: var(--background-color5); /* 배경 색상 설정 */
+    border: none; /* 테두리 제거 */
+    color: white; /* 텍스트 색상 흰색 */
+    padding: 10px 20px; /* 내부 여백 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    font-size: 16px; /* 폰트 크기 설정 */
+    margin-top: 10px; /* 상단 마진 10px */
+    cursor: pointer; /* 커서 모양 변경 */
+    border-radius: 4px; /* 둥근 모서리 설정 */
 }
 
 form button:hover {
-    background-color: var(--background-color6);
+    background-color: var(--background-color6); /* 호버 시 배경색 변경 */
 }
-/* For screens smaller than 800px */
+
+/* 800px 이하의 화면 크기용 스타일 */
 @media (max-width: 800px) {
     .notice-header {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex; /* 플렉스 박스 사용 */
+        flex-direction: column; /* 세로 방향 정렬 */
+        align-items: flex-start; /* 왼쪽 정렬 */
     }
 
     .notice-header div {
-        margin: 5px 0;
+        margin: 5px 0; /* 상하 마진 5px */
     }
 }

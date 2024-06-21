@@ -1,149 +1,149 @@
 .container {
-    width: 80%;
-    margin: 20px auto;
-    background: var(--background-color3);
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* 컨테이너 너비를 부모 요소의 80%로 설정 */
+    margin: 20px auto; /* 상하 마진 20px, 좌우 중앙 정렬 */
+    background: var(--background-color3); /* 배경 색상 변수 사용 */
+    padding: 20px; /* 내부 여백 20px */
+    border-radius: 25px; /* 둥근 모서리 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 h1,
 h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: #333; /* 텍스트 색상 설정 */
+    margin-bottom: 20px; /* 하단 마진 20px */
 }
 
 #userInfoSection,
 #purchaseHistorySection {
-    margin: 20px 0;
-    background: var(--background-color);
-    padding: 15px;
-    border-radius: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* 상하 마진 20px */
+    background: var(--background-color); /* 배경 색상 변수 사용 */
+    padding: 15px; /* 내부 여백 15px */
+    border-radius: 25px; /* 둥근 모서리 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 #userInfo {
-    padding: 10px;
-    background: var(--background-color2);
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    margin-bottom: 20px;
+    padding: 10px; /* 내부 여백 10px */
+    background: var(--background-color2); /* 배경 색상 변수 사용 */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 25px; /* 둥근 모서리 설정 */
+    margin-bottom: 20px; /* 하단 마진 20px */
 }
 
 #userInfo p {
-    margin: 15px 0;
-    font-size: large;
-    color: #555;
+    margin: 15px 0; /* 상하 마진 15px */
+    font-size: large; /* 폰트 크기 설정 */
+    color: #555; /* 텍스트 색상 설정 */
 }
 
 #purchaseHistory .card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin: 10px 0;
-    background: var(--background-color2);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 요소들을 간격을 두고 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 15px; /* 내부 여백 15px */
+    margin: 10px 0; /* 상하 마진 10px */
+    background: var(--background-color2); /* 배경 색상 변수 사용 */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 8px; /* 둥근 모서리 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 #purchaseHistory .card span {
-    font-size: 1.1em;
-    color: #333;
+    font-size: 1.1em; /* 폰트 크기 설정 */
+    color: #333; /* 텍스트 색상 설정 */
 }
 
 #purchaseHistory .refund-button {
-    background-color: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #ff4d4d; /* 배경색 설정 */
+    border: none; /* 테두리 제거 */
+    color: white; /* 텍스트 색상 흰색 */
+    padding: 10px; /* 내부 여백 10px */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
 }
 
 #purchaseHistory .refund-button:hover {
-    background-color: #ff1a1a;
+    background-color: #ff1a1a; /* 호버 시 배경색 변경 */
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    background-color: var(--background-color5);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    padding: 10px 20px; /* 내부 여백 설정 */
+    margin: 10px 0; /* 상하 마진 10px */
+    font-size: 16px; /* 폰트 크기 설정 */
+    color: #fff; /* 텍스트 색상 흰색 */
+    background-color: var(--background-color5); /* 배경 색상 변수 사용 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    transition: background-color 0.3s ease; /* 배경색 전환 효과 */
 }
 
 .button:hover {
-    background-color: var(--background-color6);
+    background-color: var(--background-color6); /* 호버 시 배경색 변경 */
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    display: none; /* 기본적으로 보이지 않음 */
+    position: fixed; /* 고정 위치 지정 */
+    z-index: 1; /* 요소의 쌓임 순서 지정 */
+    left: 0; /* 좌측 0 위치 */
+    top: 0; /* 상단 0 위치 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    overflow: auto; /* 넘치는 내용 스크롤 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
+    background-color: #fff; /* 흰색 배경 */
+    margin: auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 20px */
+    border: 1px solid #888; /* 테두리 설정 */
+    width: 80%; /* 너비를 부모 요소의 80%로 설정 */
+    max-width: 500px; /* 최대 너비를 500px로 제한 */
+    border-radius: 8px; /* 둥근 모서리 설정 */
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #aaa; /* 텍스트 색상 설정 */
+    float: right; /* 우측 정렬 */
+    font-size: 28px; /* 폰트 크기 설정 */
+    font-weight: bold; /* 폰트 두껍게 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black; /* 호버 및 포커스 시 텍스트 색상 변경 */
+    text-decoration: none; /* 텍스트 장식 제거 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 form label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #555;
+    display: block; /* 블록 요소로 설정 */
+    margin: 10px 0 5px; /* 상하 마진 10px, 하단 마진 5px */
+    color: #555; /* 텍스트 색상 설정 */
 }
 
 form input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: calc(100% - 20px); /* 너비를 100%에서 20px 뺀 크기로 설정 */
+    padding: 10px; /* 내부 여백 10px */
+    margin-bottom: 10px; /* 하단 마진 10px */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 4px; /* 둥근 모서리 설정 */
+    box-sizing: border-box; /* 박스 크기 계산 방식을 border-box로 설정 */
 }
 
 form button {
-    background-color: #28a745;
+    background-color: #28a745; /* 배경색 설정 */
 }
 
 form button:hover {
-    background-color: #218838;
+    background-color: #218838; /* 호버 시 배경색 변경 */
 }

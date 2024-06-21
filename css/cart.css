@@ -1,81 +1,85 @@
 .container {
-    background-color: var(--background-color3);
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color3); /* 배경 색상 변수 사용 */
+    width: 80%; /* 너비를 부모 요소의 80%로 설정 */
+    margin: 20px auto; /* 상하 마진 20px, 중앙 정렬 */
+    padding: 20px; /* 내부 여백 20px */
+    border-radius: 25px; /* 둥근 모서리 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
 #cartItems {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 하단 마진 20px */
 }
 
 .cart-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 10px;
-    background-color: var(--background-color);
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 요소들 간의 간격을 균등하게 분배 */
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 20px; /* 내부 여백 20px */
+    margin-bottom: 10px; /* 하단 마진 10px */
+    background-color: var(--background-color); /* 배경 색상 변수 사용 */
+    border: 1px solid #ddd; /* 테두리 설정 */
+    border-radius: 15px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: background-color 0.3s; /* 배경색 전환 효과 */
 }
 
 .cart-card.selected {
-    background-color: orange;
+    background-color: orange; /* 선택된 카드의 배경색 */
 }
 
 .cart-card h3 {
-    margin: 0;
-    font-size: 1.2em;
+    margin: 0; /* 외부 여백 제거 */
+    font-size: 1.2em; /* 폰트 크기 설정 */
 }
 
 .cart-card input[type="number"] {
-    width: 50px;
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    text-align: center;
+    width: 50px; /* 너비 설정 */
+    margin-right: 10px; /* 오른쪽 마진 10px */
+    padding: 5px; /* 내부 여백 5px */
+    border: 1px solid #ccc; /* 테두리 설정 */
+    border-radius: 3px; /* 둥근 모서리 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 .content .cart-card button {
-    max-width: 30px;
-    background: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+    max-width: 30px; /* 최대 너비 설정 */
+    background: #dc3545; /* 배경색 설정 */
+    color: white; /* 텍스트 색상 흰색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+    padding: 5px 10px; /* 내부 여백 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
 }
 
 .cart-card button:hover {
-    background: #c82333;
+    background: #c82333; /* 호버 시 배경색 변경 */
 }
 
 #cartSummary {
-    margin-top: 20px;
+    margin-top: 20px; /* 상단 마진 20px */
 }
 
 #cartSummary > div {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* 하단 마진 10px */
 }
 
 .content button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: white;
-    background: linear-gradient(107deg, #ff5858 0%, #f09819 100%);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    display: block; /* 블록 요소로 설정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    padding: 15px; /* 내부 여백 15px */
+    margin-top: 10px; /* 상단 마진 10px */
+    font-size: 1.2em; /* 폰트 크기 설정 */
+    color: white; /* 텍스트 색상 흰색 */
+    background: linear-gradient(
+        107deg,
+        #ff5858 0%,
+        #f09819 100%
+    ); /* 배경색 그라데이션 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+    cursor: pointer; /* 커서 모양 변경 */
+    transition: background-color 0.3s; /* 배경색 전환 효과 */
 }
 
 #buyNowButton:hover {
@@ -83,15 +87,15 @@
         107deg,
         rgb(255, 67, 5) 11.1%,
         rgb(245, 135, 0) 95.3%
-    );
-    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px;
-    transition-duration: 0.1s;
+    ); /* 호버 시 배경색 그라데이션 변경 */
+    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px; /* 그림자 효과 추가 */
+    transition-duration: 0.1s; /* 전환 시간 조정 */
 }
 
 #selectAllButton {
-    background: var(--background-color5);
+    background: var(--background-color5); /* 배경색 변수 사용 */
 }
 
 #selectAllButton:hover {
-    background: var(--background-color6);
+    background: var(--background-color6); /* 호버 시 배경색 변수 사용 */
 }

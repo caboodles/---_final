@@ -1,10 +1,11 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* 박스 크기 계산 방식을 border-box로 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
 }
 
 :root {
+    /* 색상 변수 정의 */
     --accent-color: #f3ff87;
     --text-color: black;
     --background-color: lightyellow;
@@ -17,38 +18,39 @@
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-color);
+    text-decoration: none; /* 링크 텍스트 장식 제거 */
+    color: var(--text-color); /* 텍스트 색상을 변수로 설정 */
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-color); /* 배경 색상 설정 */
 }
 
 .content {
-    margin: 69.4px auto 0;
-    position: relative;
-    text-align: center;
+    margin: 69.4px auto 0; /* 상단 마진 69.4px, 중앙 정렬 */
+    position: relative; /* 상대 위치 지정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 .title {
-    position: relative;
-    height: 200px;
-    background-color: var(--background-color4);
+    position: relative; /* 상대 위치 지정 */
+    height: 200px; /* 높이 200px 설정 */
+    background-color: var(--background-color4); /* 배경 색상 설정 */
 }
+
 .title h1,
 .title h3 {
-    text-align: center;
-    color: #444;
-    margin-bottom: 20px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: #444; /* 텍스트 색상 설정 */
+    margin-bottom: 20px; /* 하단 마진 20px */
 }
 
 .centered {
-    min-width: 330px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.4rem;
-    font-weight: 700;
+    min-width: 330px; /* 최소 너비 330px 설정 */
+    position: absolute; /* 절대 위치 지정 */
+    top: 50%; /* 상단으로부터 50% 위치 */
+    left: 50%; /* 왼쪽으로부터 50% 위치 */
+    transform: translate(-50%, -50%); /* 중심으로 이동 */
+    font-size: 1.4rem; /* 폰트 크기 설정 */
+    font-weight: 700; /* 폰트 굵기 설정 */
 }

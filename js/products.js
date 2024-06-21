@@ -1,4 +1,4 @@
-// Define some preloaded products
+// 사전 로드된 상품 목록 정의
 const preloadedProducts = [
     {
         id: 1,
@@ -23,7 +23,7 @@ const preloadedProducts = [
     },
 ];
 
-// Load products from session storage or use default preloaded products
+// 세션 스토리지에서 상품 로드, 없으면 사전 로드된 상품 사용
 function loadProducts() {
     const storedProducts = sessionStorage.getItem("products");
     if (!storedProducts) {
@@ -33,27 +33,27 @@ function loadProducts() {
     return JSON.parse(storedProducts);
 }
 
-// Save products to session storage
+// 세션 스토리지에 상품 저장
 function saveProducts() {
     sessionStorage.setItem("products", JSON.stringify(products));
 }
 
-// Initialize products array
+// 초기 상품 배열
 let products = loadProducts();
 
-// Get logged-in user
+// 로그인된 사용자 가져오기
 function getLoggedInUser() {
     const user = sessionStorage.getItem("loggedInUser");
     return user ? JSON.parse(user) : null;
 }
 
-// Check if user is admin
+// 사용자가 관리자 여부 확인
 function isAdmin() {
     const user = getLoggedInUser();
     return user && user.isAdmin;
 }
 
-// Add a new product
+// 새로운 상품 추가
 function addProduct() {
     const name = document.getElementById("productName").value;
     const description = document.getElementById("productDescription").value;
@@ -61,30 +61,30 @@ function addProduct() {
     const imageUrl = document.getElementById("productImage").value;
 
     const product = {
-        id: Date.now(),
+        id: Date.now(), // 고유 ID 생성
         name: name,
         description: description,
         price: price,
         imageUrl: imageUrl,
     };
 
-    products.push(product);
-    saveProducts(); // Save the updated products array to session storage
-    renderProducts();
+    products.push(product); // 배열에 새 상품 추가
+    saveProducts(); // 세션 스토리지에 저장
+    renderProducts(); // 상품 다시 렌더링
 }
 
-// Delete a product
+// 상품 삭제
 function deleteProduct(productId) {
     products = products.filter((product) => product.id !== productId);
-    saveProducts(); // Save the updated products array to session storage
-    renderProducts();
+    saveProducts(); // 세션 스토리지에 저장
+    renderProducts(); // 상품 다시 렌더링
 }
 
-// Add item to cart
+// 카트에 상품 추가
 function addToCart(productId) {
     const user = getLoggedInUser();
     if (!user) {
-        // Redirect to login page if not logged in
+        // 로그인되지 않은 경우 로그인 페이지로 이동
         alert(
             "카트에 상품을 추가하려면 로그인이 필요합니다.\n로그인 페이지로 이동 중..."
         );
@@ -95,21 +95,21 @@ function addToCart(productId) {
     const product = products.find((product) => product.id === productId);
     if (!product) {
         alert("상품을 찾을 수 없습니다.");
-        return; // Exit if product not found
+        return; // 상품을 찾을 수 없는 경우 종료
     }
 
-    // Check if the product is already in the cart
+    // 카트에 이미 상품이 있는지 확인
     if (user.cart[productId]) {
-        user.cart[productId] += 1; // Increment quantity
+        user.cart[productId] += 1; // 수량 증가
         alert(
             `${product.name}의 수량이 증가되었습니다. 수량 : ${user.cart[productId]}`
         );
     } else {
-        user.cart[productId] = 1; // Add to cart with quantity 1
+        user.cart[productId] = 1; // 수량 1로 추가
         alert(`${product.name}이 카트에 추가되었습니다. 수량 : 1`);
     }
 
-    // Update user in session storage
+    // 세션 스토리지에 사용자 정보 업데이트
     const users = JSON.parse(sessionStorage.getItem("users"));
     const userIndex = users.findIndex((u) => u.userId === user.userId);
     if (userIndex !== -1) {
@@ -119,7 +119,7 @@ function addToCart(productId) {
     }
 }
 
-// Render the products in the DOM
+// DOM에 상품 렌더링
 function renderProducts() {
     const productGrid = document.getElementById("product-grid");
     productGrid.innerHTML = "";
@@ -137,22 +137,22 @@ function renderProducts() {
             })">카트에 담기</button>
             ${
                 isAdmin()
-                    ? `<button class="delete-button" onclick="deleteProduct(${product.id})">X</button>`
+                    ? `<button class="delete-button" onclick="deleteProduct(${product.id})">X</button>` // 관리자만 삭제 버튼 표시
                     : ""
             }
         `;
 
-        productGrid.appendChild(productCard);
+        productGrid.appendChild(productCard); // 상품 카드 DOM에 추가
     });
 }
 
-// Load and render products on page load
+// 페이지 로드 시 상품 로드 및 렌더링
 window.onload = function () {
     products = loadProducts();
     if (isAdmin()) {
-        document.getElementById("addProductForm").style.display = "block";
+        document.getElementById("addProductForm").style.display = "block"; // 관리자면 상품 추가 폼 표시
     } else {
-        document.getElementById("addProductForm").style.display = "none";
+        document.getElementById("addProductForm").style.display = "none"; // 비관리자는 상품 추가 폼 숨김
     }
-    renderProducts();
+    renderProducts(); // 상품 렌더링
 };

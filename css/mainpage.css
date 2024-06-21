@@ -1,83 +1,91 @@
 .banner {
-    height: 50vh;
-    position: relative;
+    height: 50vh; /* 배너 높이를 뷰포트 높이의 50%로 설정 */
+    position: relative; /* 상대 위치 지정 */
 }
+
 .two {
-    background-color: var(--background-color2);
+    background-color: var(--background-color2); /* 배경 색상 설정 */
 }
+
 .three {
-    background-color: var(--background-color3);
+    background-color: var(--background-color3); /* 배경 색상 설정 */
 }
+
 .four {
-    background-color: var(--background-color4);
+    background-color: var(--background-color4); /* 배경 색상 설정 */
 }
 
 .image-container {
-    overflow: hidden;
+    overflow: hidden; /* 넘치는 내용 숨기기 */
 }
 
 .image-container .on_image {
-    min-width: 380px;
-    background-color: #ffb993da;
-    padding: 50px 50px;
-    border-radius: 50px;
+    min-width: 380px; /* 최소 너비 380px 설정 */
+    background-color: #ffb993da; /* 배경 색상 설정 */
+    padding: 50px 50px; /* 내부 여백 설정 */
+    border-radius: 50px; /* 둥근 모서리 설정 */
 }
 
 .image-container .on_image h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* 폰트 크기 설정 */
 }
 
 .image-container img {
-    opacity: 0.6;
-    width: 100%;
-    height: auto;
+    opacity: 0.6; /* 불투명도 설정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: auto; /* 높이를 자동으로 설정 */
 }
+
 @media (max-width: 768px) {
     .image-container img {
-        width: auto;
-        height: 100%;
+        width: auto; /* 너비를 자동으로 설정 */
+        height: 100%; /* 높이를 100%로 설정 */
     }
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    display: flex; /* 플렉스 박스 사용 */
+    flex-wrap: wrap; /* 요소들을 줄 바꿈 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-top: 20px; /* 상단 마진 20px */
 }
 
 .grid_section {
-    width: 33%;
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
+    width: 33%; /* 너비를 부모 요소의 33%로 설정 */
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    vertical-align: top; /* 상단 정렬 */
 }
 
 .grid_section img {
-    width: 80%;
-    max-width: 320px;
-    height: auto;
+    width: 80%; /* 너비를 부모 요소의 80%로 설정 */
+    max-width: 320px; /* 최대 너비 320px로 제한 */
+    height: auto; /* 높이를 자동으로 설정 */
 }
 
 .grid_section p {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: var(--background-color6);
-    font-weight: bold;
+    margin-top: 10px; /* 상단 마진 10px */
+    font-size: 1.5rem; /* 폰트 크기 설정 */
+    color: var(--background-color6); /* 텍스트 색상 설정 */
+    font-weight: bold; /* 텍스트 굵기 설정 */
 }
 
 .button {
-    background: linear-gradient(107deg, #ff5858 0%, #f09819 100%);
-    border-radius: 8px;
-    border-style: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    height: 4rem;
-    padding: 0 1.6rem;
-    text-align: center;
+    background: linear-gradient(
+        107deg,
+        #ff5858 0%,
+        #f09819 100%
+    ); /* 배경 색상 그라데이션 */
+    border-radius: 8px; /* 둥근 모서리 설정 */
+    border-style: none; /* 테두리 스타일 제거 */
+    color: #ffffff; /* 텍스트 색상 흰색 */
+    cursor: pointer; /* 커서 모양 변경 */
+    font-size: 16px; /* 폰트 크기 설정 */
+    font-weight: 500; /* 폰트 굵기 설정 */
+    height: 4rem; /* 높이 설정 */
+    padding: 0 1.6rem; /* 내부 여백 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 .button:hover {
@@ -85,39 +93,39 @@
         107deg,
         rgb(255, 67, 5) 11.1%,
         rgb(245, 135, 0) 95.3%
-    );
-    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px;
-    transition-duration: 0.1s;
+    ); /* 호버 시 배경색 그라데이션 변경 */
+    box-shadow: rgba(255, 67, 5, 0.7) 0 1px 30px; /* 그림자 효과 */
+    transition-duration: 0.1s; /* 전환 시간 설정 */
 }
 
-/* Review section styles */
+/* 리뷰 섹션 스타일 */
 #reviews-section {
-    text-align: center;
-    padding: 20px;
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 내부 여백 20px */
 }
 
 #reviews-section h3 {
-    font-size: 4rem;
-    color: rgb(255, 67, 5);
-    margin-bottom: 10px;
+    font-size: 4rem; /* 폰트 크기 설정 */
+    color: rgb(255, 67, 5); /* 텍스트 색상 설정 */
+    margin-bottom: 10px; /* 하단 마진 10px */
 }
 
 #reviews-section p {
-    font-size: 1.7rem;
-    color: #555;
-    margin: 5px 0;
+    font-size: 1.7rem; /* 폰트 크기 설정 */
+    color: #555; /* 텍스트 색상 설정 */
+    margin: 5px 0; /* 상하 마진 5px */
 }
 
 #reviews-section p:first-of-type {
-    font-size: 1.5rem;
-    color: #ff5858; /* Color for stars */
+    font-size: 1.5rem; /* 첫 번째 단락 폰트 크기 설정 */
+    color: #ff5858; /* 색상 설정 (별점 색상) */
 }
 
 b {
-    color: #ff5858;
+    color: #ff5858; /* 텍스트 색상 설정 */
 }
 
 i {
-    font-style: normal;
-    color: rgb(255, 67, 5);
+    font-style: normal; /* 기본 글꼴 스타일 설정 */
+    color: rgb(255, 67, 5); /* 텍스트 색상 설정 */
 }
