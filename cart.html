@@ -13,10 +13,14 @@
     <body>
         <nav class="navbar">
             <div class="nav_main">
+                <!-- Hamburger button -->
+                <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+                <!-- Nav logo -->
                 <div class="nav_logo">
                     <a href="mainpage.html">상 귤</a>
                 </div>
-                <ul class="nav_menu">
+                <!-- Original nav menu -->
+                <ul class="nav_menu" id="navMenu">
                     <li><a href="about.html">About</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="notices.html">Notices</a></li>
@@ -32,13 +36,23 @@
                 <li class="sign-in">
                     <a id="signInLink" href="sign-in.html">Sign In</a>
                 </li>
-                <li>
+                <li class="my-page">
                     <a id="myPageLink" href="my-page.html" style="display: none"
                         >My Page</a
                     >
                 </li>
             </ul>
         </nav>
+
+        <!-- Sidebar for small screens -->
+        <div class="sidebar" id="sidebar">
+            <ul class="sidebar_menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="notices.html">Notices</a></li>
+                <li><a href="reviews.html">Review</a></li>
+            </ul>
+        </div>
         <div class="content">
             <div class="title">
                 <div class="centered">
